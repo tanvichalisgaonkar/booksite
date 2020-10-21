@@ -1,0 +1,157 @@
+
+<html>
+<head>
+	<title>HOMELoggedIn</title>
+	<style>
+	#head{
+		width:100%;
+		height: 300px;
+		background-image: url("HomepageBackground.jpg");
+	}
+	#img1{
+			height: 280px;
+			width:300px;
+			position: absolute;
+			left: 20px;
+			top:20px;
+		}
+		#img2{
+			height: 280px;
+			width:300px;
+			position: absolute;
+			right: 20px;
+			top:20px;
+		}
+		#title{
+			font-size: 100px;
+			font-family: cambria;
+			font-weight: 70px;
+			text-align: center;
+			color:	#f4a742;
+		}
+		#div1{
+			height: 360px;
+			width: 300px;
+			position: absolute;
+			left:10px;
+			top:330px;
+			border:5px solid gray;
+			padding:20px;
+			border-radius: 10px;
+		}
+		a:link{
+			height: 50px;
+			width: 260px;
+			border-bottom: 5px solid gray;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+			background-color:	#f4a742;
+			padding:20px 85px;
+		}
+
+		#div2{
+			height:360px;
+			width:1080px;
+			position: absolute;
+			top:330px;
+			left:400px;
+			border-radius: 10px;
+			border: 5px solid gray;
+			padding: 20px;
+		}
+		img {
+  vertical-align: middle;
+}
+.container {
+  position: relative;
+}
+.mySlides {
+  display: none;
+}
+.prev,.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: black;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+	</style>
+</head>
+<body>
+<div id="head">
+	<img src="BOOK (2).png" id="img1">
+	<h1 id ="title">BOOKS</h1>
+	<img src="BOOK (2).png" id="img2">
+</div>
+<div id="div1">
+	<center>
+		<br><br><br><br>
+	<a href="HOMEPAGE.html">HOME</a><br><br><br><br><br><br>	
+	<a href="SELL.html">SELL BOOKS</a><br><br><br><br><br><br>
+	<a href="BUY.php">BUY BOOKS</a>
+	</center>
+</div>
+<div id="div2">
+	<div class="container">
+  <div class="mySlides">
+    <img src="english.jpg" style="width:1050px; height:300px;">
+  </div>
+
+  <div class="mySlides">
+    <img src="book2.jpg" style="width:1050px; height:300px;">
+  </div>
+
+  <div class="mySlides">
+    <img src="book3.jpg" style="width:1050px; height:300px;">
+  </div>
+    
+  <div class="mySlides">
+    <img src="book4.jpg" style="width:1050px; height:300px;">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">PREV</a>
+  <a class="next" onclick="plusSlides(1)">NEXT</a>
+</div>
+
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+ 
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  
+}
+</script>
+</body>
+</html>

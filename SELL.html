@@ -1,0 +1,109 @@
+
+<html>
+<head>
+	<title>SELLER INFORMATION</title>
+</head>
+<style>
+	#head{
+		width:360px;
+		height: 300px;
+		background-image: url("HomepageBackground.jpg");
+	}
+	#img1{
+			height: 240px;
+			width:100px;
+			position: absolute;
+			left: 10px;
+			top:50px;
+		}
+		#img2{
+			height: 120px;
+			width:100px;
+			position: absolute;
+			left: 210px;
+			top:50px;
+		}
+		#title{
+			font-size: 50px;
+			font-family: cambria;
+			font-weight: 70px;
+			text-align: center;
+			vertical-align: center;
+			color:	#f4a742;
+		}
+		#div1{
+			height: 360px;
+			width: 300px;
+			position: absolute;
+			left:10px;
+			top:330px;
+			border:5px solid gray;
+			padding:20px;
+			border-radius: 10px;
+		}
+		a:link{
+			height: 50px;
+			width: 260px;
+			border-bottom: 5px solid gray;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+			background-color:	#f4a742;
+			padding:20px 85px;
+		}
+
+		#div2{
+			position: absolute;
+			width:1100px;
+			height: 738px;
+			border:5px solid gray;
+			border-radius: 10px;
+			left:400px;
+			top:8px;
+		}
+</style>
+<body>
+<div id="head">
+	<img src="BOOK (2).png" id="img1">
+	<h1 id ="title">BOOKS</h1>
+	<img src="BOOK (2).png" id="img2">
+</div>
+<div id="div1">
+	<center>
+		<br><br><br><br>
+	<a href="HOMEPAGE.html">HOME</a><br><br><br><br><br><br>	
+	<a href="SELL.html">SELL BOOKS</a><br><br><br><br><br><br>
+	<a href="BUY.php">BUY BOOKS</a>
+	</center>
+</div>
+<div id="div2">
+	<center>
+		<H3>SELLER'S FORM</H3 >
+	</center>
+	<form action="sell.php" method="POST" enctype="multipart/form-data">
+		<fieldset>
+			<legend><h5>SELLER'S CONTACT INFORMATION</h5></legend>
+			NAME:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="text" name="name"><br>
+			<br>
+			CONTACT NO.:&nbsp&nbsp<input type="phone" name="contact"><br><br>
+			ADDRESS:<br>
+			<textarea rows="5" cols="50" name="address"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend><h5>BOOK'S DETAIL</h5></legend>
+			BOOK'S TITLE:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="title"><br><br>
+			BOOK'S AUTHOR:&nbsp<input type="text" name="author"><br><br>
+			BOOK'S SUBJECT:&nbsp<input type="text" name="subject"><br><br>
+			BOOK'S DECRIPTION:<br><textarea rows="5" cols="40" name="discp"></textarea><br><br>
+			COST OF BOOK:&nbsp&nbsp&nbsp&nbsp<input type="text" name="cost"><br><br>
+			<input type="file" name="file">
+		</fieldset><br>
+		<center><input type="submit" name="submit" value="SUBMIT"></center>
+
+	</form>
+<div>
+</div>
+
+</body>
+</html>

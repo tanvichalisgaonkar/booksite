@@ -1,0 +1,179 @@
+
+<html>
+<head>
+	<title>OLD BOOKS</title>
+	<style>
+		body{
+			background-image: url("HomepageBackground.jpg");
+
+		}
+		#head{
+			height :230;
+			width :800;
+			padding: 40px;
+			position: absolute;
+			left:300px;
+			right:400px;
+			text-align: center;
+			
+		}
+		#title{
+			font-size: 100px;
+			font-family: cambria;
+			font-weight: 70px;
+			text-align: center;
+			color:	#f4a742;
+		}
+		#img1{
+			height: 750px;
+			width:300px;
+			position: absolute;
+			left: 20px;
+			top:20px;
+		}
+		#img2{
+			height: 750px;
+			width:300px;
+			position: absolute;
+			right: 20px;
+			top:20px;
+		}
+		#button1{
+			height:70px;
+			width:150px;
+			border-radius: 15px;
+			bottom:200px;
+			left: 600px;
+			position: absolute;
+			background-color :#f4a742; 
+			cursor:pointer;
+		}
+		#button2{
+			height:70px;
+			width:150px;
+			border-radius: 15px;
+			bottom:200px;
+			left:800px;
+			position: absolute;
+			background-color :#f4a742;
+			cursor:pointer; 
+		
+		}
+		.modal {
+  				display: none; 
+  				position: fixed;
+  				z-index: 1; 
+  				padding: 100px; 
+  				left: 0;
+  				top: 0;
+ 				width: 100%; 
+  				height: 100%; 
+  				overflow: auto; 
+  				background-color: rgba(0,0,0,0.4); 
+		}
+
+/* Modal Content */
+		.modal-content {
+  			background-color: white;
+  			margin: auto;
+  			padding: 20px;
+  			border: 1px solid #888;
+  			width: 400px;
+  			height: 300px;
+		}
+
+/* The Close Button */
+		.close {
+  			color: #aaaaaa;
+ 			 float: right;
+  			font-size: 28px;
+  			font-weight: bold;
+		}	
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[type=text], input[type=password] {
+  width: 200px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  border-radius:20px;
+}
+
+
+	</style>
+</head>
+<body>
+	<img src="BOOK (2).png" id="img1">
+	<div id="head">
+		<h1 id ="title">BOOKS</h1>
+	</div>
+	<img src="BOOK (2).png" id="img2">
+	<button id="button1" onclick="login()"><h3>LOGIN</h3></button>
+	<button id="button2" onclick="signup()"><h3>SIGNUP</h3></button>
+
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closelogin()">&times;</span>
+    <form action="login.php" method="POST">
+    	<fieldset>  
+    	<legend>LOGIN</legend> 
+    	 	<center>
+    	&nbspUserName:&nbsp&nbsp&nbsp<input type="text" name="user"><br><br>
+    	Password:&nbsp&nbsp&nbsp<input type="password" name="pswd"><br><br><br><br>
+    	<input type="submit" name="LOGIN" value="LOGIN" style="width: 100px; height: 50px;">
+    </center>
+    </fieldset>
+    </form>
+  </div>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closesignup()">&times;</span>
+    <form action="SIGNUP.php" method="POST">
+    	<fieldset>
+    		<legend>SIGNUP</legend>
+    	<center>
+    	&nbspFIRST NAME:&nbsp&nbsp&nbsp<input type="text" name="fname"><br>
+    	&nbspLAST NAME:&nbsp&nbsp&nbsp<input type="text" name="lname"><br>
+    	&nbspUSER NAME:&nbsp&nbsp&nbsp<input type="text" name="user"><br>
+    	PASSWORD:&nbsp&nbsp&nbsp<input type="password" name="pswd"><br><br><br>
+    	
+    	<input type="submit" name="SIGNUP" value="SIGNUP" style="width: 100px;height: 50px;"></center>
+    	</fieldset>
+    </form>
+  </div>
+
+</div>
+
+<script>
+
+var modal = document.getElementsByClassName('modal');
+ 
+ function login() {
+  modal[0].style.display = "block";
+}
+function signup() {
+  modal[1].style.display = "block";
+}
+ function closelogin() {
+  modal[0].style.display = "none";
+}
+function closesignup() {
+  modal[1].style.display = "none";
+}
+
+
+
+</script>
+
+</body>
+</html>
